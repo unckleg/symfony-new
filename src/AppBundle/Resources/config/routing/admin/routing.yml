@@ -23,3 +23,18 @@ admin_countries_delete:
     defaults: { _controller: AppBundle:Admin/Country:delete }
     requirements:
         id: '\d+'
+
+
+# Login & Authorization | Login i autorizacija korisnika
+login:
+    path:     /admin/login
+    defaults: { _controller: AppBundle:Admin/Security:login }
+
+logout:
+    path:     /admin/logout
+    defaults: { _controller: AppBundle:Admin/Security:logout }
+
+auth:
+    path:     /admin/auth
+    defaults: { _controller: AppBundle:Admin/Security:check }
+
