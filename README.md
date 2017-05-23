@@ -1,8 +1,12 @@
 - Prvo preko terminala dodjite do foldera projekta i preko composer-a instalirajte FosUserBundle
+	```
 	composer require friendsofsymfony/user-bundle "~2.0"
+	```
 
 - Nakon toga preko Netbeans-a nadjite fajl AppKernel.php (projekat/app/AppKernel.php) i u njega dodajte na kraj
-    new FOS\UserBundle\FOSUserBundle()
+   ```ruby
+    new FOS\UserBundle\FOSUserBundle() 
+    ```
 
 - Kreirajte novi entitet nek se zove User (i pogledajte sta sam tamo ispisao u AppBundle/Entity/AppUser) 
 
@@ -15,10 +19,12 @@
 - Udjite u projekat/src/AppBundle/Resources/views/admin i napravite novi folder security u njemu napravite view/twig skriptu index.html.twig
  	Pogledajte kako sam ja svoju odradio i odradite isto. 
 
-- Na kraju udjite preko konzole i unesite ovih par komandi
+- Na kraju udjite preko konzole i unesite ovih par komandi:
+```ruby
 	- php bin/console cache:clear --env=dev
 	- php bin/console cache:clear --env=prod
 	- php bin/console fos:user:create (Ova komanda je za kreiranje user-a)
 	- php bin/console fos:user:promote (Unesite vas username i stavite sebi rolu: ROLE_ADMIN)
+```
 
-Voila!
+# Voila!
